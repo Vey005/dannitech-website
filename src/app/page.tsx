@@ -140,16 +140,23 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden bg-white text-[#1D1F27]">
       <header id="main-header" className="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent transition-all duration-300">
         <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10 sm:h-22">
-          <a href="#top" className="flex items-center" aria-label="DanniTech Solutions home">
+          <a href="#top" className="flex items-center gap-2.5 font-bold tracking-tight hover:text-[#129BDB] transition-all duration-300" aria-label="DanniTech Solutions home">
             <Image
-              src="/images/dannitech-logo.png"
+              src="/images/logo-icon.png"
               alt="DanniTech Solutions Logo"
-              width={280}
-              height={88}
+              width={160}
+              height={160}
               priority
-              className="h-16 object-contain sm:h-[72px]"
-              style={{ width: "auto" }}
+              className="h-10 w-10 object-contain sm:h-12 sm:w-12"
             />
+            <div className="flex items-center">
+              <span className="nav-brand-text text-lg font-black tracking-tight text-white transition-all duration-300 sm:text-2xl">
+                DanniTech
+              </span>
+              <span className="text-[#129BDB] text-lg font-black tracking-tight sm:text-2xl">
+                Solutions
+              </span>
+            </div>
           </a>
 
           <div className="hidden items-center gap-8 md:flex">
@@ -417,16 +424,23 @@ export default function Home() {
           <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.5fr_1fr_1fr_1fr] pb-12 border-b border-white/5">
             {/* Column 1: Brand & Bio */}
             <div className="flex flex-col gap-4">
-              <a href="#top" className="inline-block animate-rise -ml-2" aria-label="DanniTech Solutions home">
+              <a href="#top" className="inline-flex items-center gap-2.5 animate-rise -ml-2 hover:text-[#129BDB] transition-all duration-300" aria-label="DanniTech Solutions home">
                 <Image
-                  src="/images/dannitech-logo.png"
-                  alt="DanniTech Solutions Logo"
-                  width={540}
-                  height={168}
+                  src="/images/logo-icon.png"
+                  alt="DanniTech Solutions Logo Icon"
+                  width={160}
+                  height={160}
                   priority
-                  className="h-24 object-contain sm:h-28"
-                  style={{ width: "auto" }}
+                  className="h-12 w-12 object-contain sm:h-14 sm:w-14"
                 />
+                <div className="flex items-center">
+                  <span className="text-lg font-black tracking-tight text-white sm:text-2xl">
+                    DanniTech
+                  </span>
+                  <span className="text-[#129BDB] text-lg font-black tracking-tight sm:text-2xl">
+                    Solutions
+                  </span>
+                </div>
               </a>
               <p className="text-sm leading-6 text-white/80 max-w-xs">
                 Premium digital systems that make Ghanaian businesses faster, smarter, and easier to manage.
@@ -582,6 +596,7 @@ export default function Home() {
             function initHeaderScroll() {
               const header = document.getElementById('main-header');
               const links = document.querySelectorAll('.nav-link');
+              const brandTexts = document.querySelectorAll('.nav-brand-text');
               
               function handleScroll() {
                 if (window.scrollY > 40) {
@@ -591,12 +606,20 @@ export default function Home() {
                     link.classList.add('text-[#5D6678]', 'hover:text-[#005DAA]');
                     link.classList.remove('text-white/90', 'hover:text-[#129BDB]');
                   });
+                  brandTexts.forEach((text) => {
+                    text.classList.add('text-[#1D1F27]');
+                    text.classList.remove('text-white');
+                  });
                 } else {
                   header.classList.add('bg-transparent', 'border-transparent');
                   header.classList.remove('bg-white/85', 'backdrop-blur-xl', 'shadow-[0_10px_40px_rgba(29,31,39,0.06)]', 'border-b', 'border-[#1E2A44]/10');
                   links.forEach((link) => {
                     link.classList.add('text-white/90', 'hover:text-[#129BDB]');
                     link.classList.remove('text-[#5D6678]', 'hover:text-[#005DAA]');
+                  });
+                  brandTexts.forEach((text) => {
+                    text.classList.add('text-white');
+                    text.classList.remove('text-[#1D1F27]');
                   });
                 }
               }
