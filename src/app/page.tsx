@@ -182,11 +182,11 @@ export default function Home() {
           fill
           sizes="100vw"
           priority
-          className="animate-hero-image object-cover"
+          className="animate-hero-image object-cover opacity-20 filter blur-[3px] mix-blend-mode-luminosity"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,7,13,0.88)_0%,rgba(0,93,170,0.72)_47%,rgba(18,155,219,0.18)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(255,255,255,0.28),transparent_28%),linear-gradient(180deg,rgba(5,7,13,0.08),rgba(5,7,13,0.62))]" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/45 to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,7,13,0.94)_0%,rgba(7,26,42,0.86)_50%,rgba(18,155,219,0.1)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(255,255,255,0.12),transparent_35%),linear-gradient(180deg,transparent,rgba(7,26,42,0.96))]" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/30 to-transparent" />
 
         <div className="relative mx-auto flex max-w-7xl flex-col px-5 pb-20 sm:px-8 lg:px-10">
           <div className="max-w-4xl pt-4 pb-12 sm:pt-6 sm:pb-16 lg:pt-8 lg:pb-20">
