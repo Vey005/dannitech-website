@@ -138,7 +138,7 @@ const benefits = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-white text-[#1D1F27]">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-[#1E2A44]/10 bg-white/70 shadow-[0_10px_40px_rgba(29,31,39,0.06)] backdrop-blur-xl">
+      <header id="main-header" className="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent transition-all duration-300">
         <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10 sm:h-22">
           <a href="#top" className="flex items-center" aria-label="DanniTech Solutions home">
             <Image
@@ -157,7 +157,7 @@ export default function Home() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold text-[#5D6678] transition hover:text-[#005DAA]"
+                className="nav-link text-sm font-semibold text-white/90 transition-all duration-300 hover:text-[#129BDB]"
               >
                 {link.label}
               </a>
@@ -175,7 +175,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="top" className="relative min-h-[84svh] overflow-hidden bg-[#071A2A] pt-24 text-white sm:pt-28">
+      <section id="top" className="relative min-h-[92svh] overflow-hidden bg-[#071A2A] pt-36 text-white sm:pt-44 lg:pt-52">
         <Image
           src="/images/stock/business-collaboration.jpg"
           alt="Professionals collaborating around business technology"
@@ -189,7 +189,7 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/40 to-transparent" />
 
         <div className="relative mx-auto flex max-w-7xl flex-col px-5 pb-20 sm:px-8 lg:px-10">
-          <div className="max-w-4xl pt-4 pb-12 sm:pt-6 sm:pb-16 lg:pt-8 lg:pb-20">
+          <div className="max-w-4xl pt-16 pb-12 sm:pt-24 sm:pb-16 lg:pt-32 lg:pb-20">
             <h1 className="animate-rise animation-delay-100 mt-0 max-w-5xl text-4xl font-black leading-[1.04] text-white sm:text-6xl lg:text-7xl">
               Premium digital systems that make Ghanaian businesses faster, smarter, and easier to manage.
             </h1>
@@ -554,7 +554,7 @@ export default function Home() {
         </svg>
       </a>
 
-      {/* Scroll Reveal Observer Script */}
+      {/* Scroll Reveal & Transparent Header Scroll Script */}
       <Script
         id="scroll-reveal-observer"
         strategy="afterInteractive"
@@ -578,10 +578,42 @@ export default function Home() {
                 observer.observe(el);
               });
             }
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', initReveal);
-            } else {
+
+            function initHeaderScroll() {
+              const header = document.getElementById('main-header');
+              const links = document.querySelectorAll('.nav-link');
+              
+              function handleScroll() {
+                if (window.scrollY > 40) {
+                  header.classList.add('bg-white/85', 'backdrop-blur-xl', 'shadow-[0_10px_40px_rgba(29,31,39,0.06)]', 'border-b', 'border-[#1E2A44]/10');
+                  header.classList.remove('bg-transparent', 'border-transparent');
+                  links.forEach((link) => {
+                    link.classList.add('text-[#5D6678]', 'hover:text-[#005DAA]');
+                    link.classList.remove('text-white/90', 'hover:text-[#129BDB]');
+                  });
+                } else {
+                  header.classList.add('bg-transparent', 'border-transparent');
+                  header.classList.remove('bg-white/85', 'backdrop-blur-xl', 'shadow-[0_10px_40px_rgba(29,31,39,0.06)]', 'border-b', 'border-[#1E2A44]/10');
+                  links.forEach((link) => {
+                    link.classList.add('text-white/90', 'hover:text-[#129BDB]');
+                    link.classList.remove('text-[#5D6678]', 'hover:text-[#005DAA]');
+                  });
+                }
+              }
+              
+              window.addEventListener('scroll', handleScroll);
+              handleScroll();
+            }
+
+            function initAll() {
               initReveal();
+              initHeaderScroll();
+            }
+
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', initAll);
+            } else {
+              initAll();
             }
           })();
         `}
