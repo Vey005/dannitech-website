@@ -12,48 +12,54 @@ const services = [
   {
     title: "Website Design & Development",
     label: "Web",
-    image: "/images/stock/business-collaboration.jpg",
-    alt: "Business team collaborating with laptops",
+    image: "/images/ghana/african-business-presentation.jpg",
+    alt: "African business professional presenting analytics for a digital system",
+    position: "center",
     description:
       "Modern, mobile-friendly websites that make your business look credible and help customers reach you faster.",
   },
   {
     title: "POS Systems",
     label: "POS",
-    image: "/images/stock/pos-system.jpg",
-    alt: "Modern touchscreen POS system at a counter",
+    image: "/images/ghana/ghanaian-pos-cashier.png",
+    alt: "Black Ghanaian cashier using a modern touchscreen POS system",
+    position: "center",
     description:
       "Sell faster, track stock, manage customers, print receipts, and monitor business performance from one system.",
   },
   {
     title: "School Management Systems",
     label: "SMS",
-    image: "/images/stock/school-management.jpg",
-    alt: "Students using a laptop in a classroom",
+    image: "/images/ghana/african-students-classroom.jpg",
+    alt: "African students learning together in a classroom",
+    position: "center",
     description:
       "Manage students, parents, teachers, fees, attendance, reports, payroll, announcements, and academic records.",
   },
   {
     title: "Restaurant & Food Ordering Systems",
     label: "Food",
-    image: "/images/stock/restaurant-ordering.jpg",
-    alt: "Chef using a digital restaurant ordering display",
+    image: "/images/ghana/african-restaurant-workers.jpg",
+    alt: "African restaurant workers serving customers at a food counter",
+    position: "center",
     description:
       "Take orders, manage menus, track kitchen activity, process payments, and improve customer experience.",
   },
   {
     title: "Hardware & IT Support",
     label: "IT",
-    image: "/images/stock/hardware-support.jpg",
-    alt: "Technicians repairing computer hardware",
+    image: "/images/ghana/ghanaian-it-support.png",
+    alt: "Black Ghanaian IT technician configuring office computer and networking hardware",
+    position: "center",
     description:
       "Computer support, hardware setup, networking, troubleshooting, installations, and technical assistance.",
   },
   {
     title: "Custom Business Software",
     label: "Build",
-    image: "/images/stock/business-collaboration.jpg",
-    alt: "Business professionals reviewing software on a laptop",
+    image: "/images/ghana/african-business-team.jpg",
+    alt: "African business team discussing digital operations",
+    position: "center",
     description:
       "Dashboards, reports, inventory systems, booking systems, and management platforms built around your workflow.",
   },
@@ -62,24 +68,27 @@ const services = [
 const products = [
   {
     name: "Sika POS",
-    image: "/images/stock/pos-system.jpg",
-    alt: "Touchscreen POS software at a checkout counter",
+    image: "/images/ghana/ghanaian-pos-cashier.png",
+    alt: "Black Ghanaian cashier managing sales with a touchscreen POS system",
+    position: "center",
     summary:
       "Point-of-sale software for shops that need sales, stock, receipts, customers, and performance tracking in one place.",
     details: ["Fast checkout", "Stock control", "Receipt printing"],
   },
   {
     name: "SynOrders",
-    image: "/images/stock/restaurant-ordering.jpg",
-    alt: "Restaurant kitchen order management screen",
+    image: "/images/ghana/african-restaurant-workers.jpg",
+    alt: "African restaurant team serving food orders",
+    position: "center",
     summary:
       "Restaurant and food ordering tools for menus, orders, kitchen flow, payments, and customer service.",
     details: ["Menu management", "Kitchen tracking", "Order history"],
   },
   {
     name: "School Management SaaS",
-    image: "/images/stock/school-management.jpg",
-    alt: "Students collaborating with a laptop in class",
+    image: "/images/ghana/african-students-classroom.jpg",
+    alt: "African students in a classroom using school records and learning tools",
+    position: "center",
     summary:
       "A smart school platform for fees, reports, attendance, payroll, announcements, and academic records.",
     details: ["Student records", "Fees and payroll", "Parent updates"],
@@ -135,12 +144,47 @@ const benefits = [
   "Solutions built around actual business needs",
 ];
 
+const trustScenes = [
+  {
+    title: "Retail Shops",
+    image: "/images/ghana/ghanaian-pos-cashier.png",
+    alt: "Black Ghanaian cashier using a POS system in a retail shop",
+    position: "center",
+  },
+  {
+    title: "Schools",
+    image: "/images/ghana/african-students-classroom.jpg",
+    alt: "African students studying in a classroom",
+    position: "center",
+  },
+  {
+    title: "Restaurants",
+    image: "/images/ghana/african-restaurant-workers.jpg",
+    alt: "African restaurant staff serving customers",
+    position: "center",
+  },
+  {
+    title: "Business Teams",
+    image: "/images/ghana/african-business-team.jpg",
+    alt: "African business team meeting in a cafe",
+    position: "center",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-white text-[#1D1F27]">
       <header id="main-header" className="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent transition-all duration-300">
         <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10 sm:h-22">
           <a href="#top" className="flex items-center gap-2 font-bold tracking-tight hover:text-[#129BDB] transition-all duration-300" aria-label="DanniTech Solutions home">
+            <Image
+              src="/images/logo-icon.png"
+              alt="DanniTech Solutions logo mark"
+              width={48}
+              height={48}
+              priority
+              className="h-10 w-10 object-contain sm:h-12 sm:w-12"
+            />
             <div className="flex items-center">
               <span className="nav-brand-text text-lg font-black tracking-tight text-white transition-all duration-300 sm:text-2xl">
                 DanniTech
@@ -164,7 +208,7 @@ export default function Home() {
           </div>
 
           <a
-            href="https://wa.me/233536324053"
+            href="https://wa.me/233548470413"
             className="shine-button rounded-full bg-[#129BDB] px-4 py-3 text-sm font-bold text-white shadow-[0_14px_32px_rgba(18,155,219,0.28)] transition hover:-translate-y-0.5 hover:bg-[#005DAA] sm:px-5"
             target="_blank"
             rel="noreferrer"
@@ -176,18 +220,18 @@ export default function Home() {
 
       <section id="top" className="relative min-h-[92svh] overflow-hidden bg-[#071A2A] pt-36 text-white sm:pt-44 lg:pt-52">
         <Image
-          src="/images/stock/business-collaboration.jpg"
-          alt="Professionals collaborating around business technology"
+          src="/images/ghana/african-business-team.jpg"
+          alt="African professionals discussing business technology in a modern cafe"
           fill
           sizes="100vw"
           priority
-          className="animate-hero-image object-cover opacity-65"
+          className="animate-hero-image object-cover object-center opacity-70"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,7,13,0.85)_0%,rgba(7,26,42,0.60)_50%,rgba(18,155,219,0.12)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(255,255,255,0.22),transparent_35%),linear-gradient(180deg,transparent,rgba(7,26,42,0.88))]" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/40 to-transparent" />
 
-        <div className="relative mx-auto flex max-w-7xl flex-col px-5 pb-20 sm:px-8 lg:px-10">
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 pb-20 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-10">
           <div className="max-w-4xl pt-16 pb-12 sm:pt-24 sm:pb-16 lg:pt-32 lg:pb-20">
             <h1 className="animate-rise animation-delay-100 mt-0 max-w-5xl text-4xl font-black leading-[1.04] text-white sm:text-6xl lg:text-7xl">
               Premium digital systems that make Ghanaian businesses faster, smarter, and easier to manage.
@@ -199,7 +243,7 @@ export default function Home() {
 
             <div className="animate-rise animation-delay-300 mt-9 flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://wa.me/233536324053"
+                href="https://wa.me/233548470413"
                 className="shine-button rounded-full bg-[#129BDB] px-6 py-4 text-center text-sm font-bold text-white shadow-[0_20px_50px_rgba(18,155,219,0.36)] transition hover:-translate-y-0.5 hover:bg-[#005DAA]"
                 target="_blank"
                 rel="noreferrer"
@@ -215,7 +259,73 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="animate-rise animation-delay-400 grid gap-3 pb-2 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="animate-float-card hidden rounded-lg border border-white/20 bg-white/94 p-5 text-[#1D1F27] shadow-[0_36px_90px_rgba(0,0,0,0.28)] backdrop-blur-xl lg:block">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#129BDB]">Live operations</p>
+                <h2 className="mt-2 text-2xl font-black">DanniTech Control Desk</h2>
+              </div>
+              <span className="rounded-full bg-[#EAF7FD] px-3 py-2 text-xs font-black text-[#005DAA]">
+                Today
+              </span>
+            </div>
+
+            <div className="mt-6 grid grid-cols-2 gap-3 xl:grid-cols-4">
+              {[
+                ["Sales", "GHC 58K"],
+                ["Orders", "1,230"],
+                ["Clients", "876"],
+                ["Uptime", "99.9%"],
+              ].map(([label, value]) => (
+                <div key={label} className="rounded-lg border border-[#1E2A44]/10 bg-white p-4 shadow-[0_12px_26px_rgba(29,31,39,0.06)]">
+                  <p className="text-xs font-bold text-[#5D6678]">{label}</p>
+                  <p className="mt-2 text-lg font-black text-[#1D1F27]">{value}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-5 grid gap-4 xl:grid-cols-[1.55fr_1fr]">
+              <div className="rounded-lg border border-[#1E2A44]/10 bg-[#F7FBFE] p-4">
+                <div className="flex items-center justify-between">
+                  <p className="text-sm font-black">Performance</p>
+                  <p className="text-xs font-bold text-[#5D6678]">Live trend</p>
+                </div>
+                <div className="mt-5 flex h-40 items-end gap-3">
+                  {[46, 60, 53, 74, 64, 88, 82, 96].map((height, index) => (
+                    <div key={`${height}-${index}`} className="flex flex-1 items-end rounded-sm bg-white">
+                      <div
+                        className="animate-bar-grow w-full rounded-sm bg-gradient-to-t from-[#005DAA] to-[#129BDB]"
+                        style={{ height: `${height}%`, animationDelay: `${index * 80}ms` }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-lg border border-[#1E2A44]/10 bg-[#F7FBFE] p-4">
+                <p className="text-sm font-black">Product focus</p>
+                <div className="mt-5 space-y-4">
+                  {[
+                    ["Sika POS", "82%"],
+                    ["SynOrders", "68%"],
+                    ["School SaaS", "54%"],
+                  ].map(([label, width]) => (
+                    <div key={label}>
+                      <div className="flex justify-between text-xs font-bold text-[#5D6678]">
+                        <span>{label}</span>
+                        <span>{width}</span>
+                      </div>
+                      <div className="mt-2 h-2 rounded-full bg-white">
+                        <div className="h-full rounded-full bg-[#129BDB]" style={{ width }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="animate-rise animation-delay-400 grid gap-3 pb-2 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             {benefits.slice(0, 4).map((benefit, index) => (
               <div
                 key={benefit}
@@ -242,6 +352,47 @@ export default function Home() {
               <p className="mt-2 text-sm font-bold text-[#5D6678]">{stat.label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-16 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div className="reveal">
+              <p className="text-sm font-black text-[#129BDB]">Made For Local Workflows</p>
+              <h2 className="mt-3 max-w-xl text-3xl font-black leading-tight text-[#1D1F27] sm:text-4xl">
+                Digital systems shaped around real Ghanaian workdays.
+              </h2>
+            </div>
+            <p className="reveal max-w-2xl text-base leading-7 text-[#5D6678] lg:justify-self-end">
+              From shops and schools to restaurants and growing offices, DanniTech builds practical tools around
+              the daily realities of local teams, customers, and operations.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {trustScenes.map((scene, index) => (
+              <article
+                key={scene.title}
+                className="motion-card reveal group relative min-h-[280px] overflow-hidden rounded-lg border border-[#1E2A44]/10 bg-[#EAF7FD] shadow-[0_18px_45px_rgba(29,31,39,0.07)]"
+                style={{ transitionDelay: `${index * 80}ms` }}
+              >
+                <Image
+                  src={scene.image}
+                  alt={scene.alt}
+                  fill
+                  sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
+                  className="object-cover transition duration-700 group-hover:scale-110"
+                  style={{ objectPosition: scene.position }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071A2A]/78 via-[#071A2A]/10 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3">
+                  <h3 className="text-lg font-black text-white">{scene.title}</h3>
+                  <span className="h-2.5 w-2.5 rounded-sm bg-[#129BDB] shadow-[0_0_18px_rgba(18,155,219,0.9)]" />
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -274,6 +425,7 @@ export default function Home() {
                     fill
                     sizes="(min-width: 1280px) 390px, (min-width: 768px) 45vw, 90vw"
                     className="object-cover transition duration-500 group-hover:scale-105"
+                    style={{ objectPosition: service.position }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1D1F27]/45 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white/95 text-sm font-black text-[#005DAA] shadow-[0_10px_24px_rgba(29,31,39,0.12)]">
@@ -317,6 +469,7 @@ export default function Home() {
                     fill
                     sizes="(min-width: 1024px) 390px, 90vw"
                     className="object-cover"
+                    style={{ objectPosition: product.position }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#005DAA]/40 via-transparent to-white/20" />
                 </div>
@@ -355,12 +508,11 @@ export default function Home() {
               </div>
               <div className="relative mt-8 aspect-[4/3] w-full overflow-hidden rounded-lg border border-[#1E2A44]/10 bg-white shadow-[0_18px_45px_rgba(29,31,39,0.06)]">
                 <Image
-                  src="/images/stock/idea-to-launch.png"
-                  alt="A clean technology process roadmap screen showing idea to launch flowcharts"
+                  src="/images/ghana/african-business-presentation.jpg"
+                  alt="African business professional presenting a digital analytics dashboard"
                   fill
                   sizes="(min-width: 1024px) 35vw, 90vw"
                   className="object-cover"
-                  priority
                 />
               </div>
             </div>
@@ -393,7 +545,7 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a
-              href="https://wa.me/233536324053"
+              href="https://wa.me/233548470413"
               className="shine-button rounded-full bg-[#129BDB] px-8 py-4 text-sm font-bold text-white shadow-[0_20px_50px_rgba(18,155,219,0.36)] transition hover:-translate-y-0.5 hover:bg-[#005DAA]"
               target="_blank"
               rel="noreferrer"
@@ -545,7 +697,7 @@ export default function Home() {
 
       {/* Floating WhatsApp Action Button */}
       <a
-        href="https://wa.me/233536324053"
+        href="https://wa.me/233548470413"
         className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_12px_36px_rgba(37,211,102,0.42)] transition-all duration-300 hover:scale-110 hover:bg-[#20ba5a] active:scale-95"
         target="_blank"
         rel="noreferrer"
