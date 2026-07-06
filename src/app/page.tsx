@@ -140,15 +140,7 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden bg-white text-[#1D1F27]">
       <header id="main-header" className="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent transition-all duration-300">
         <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10 sm:h-22">
-          <a href="#top" className="flex items-center gap-2.5 font-bold tracking-tight hover:text-[#129BDB] transition-all duration-300" aria-label="DanniTech Solutions home">
-            <Image
-              src="/images/logo-icon.png"
-              alt="DanniTech Solutions Logo"
-              width={160}
-              height={160}
-              priority
-              className="h-10 w-10 object-contain sm:h-12 sm:w-12"
-            />
+          <a href="#top" className="flex items-center gap-2 font-bold tracking-tight hover:text-[#129BDB] transition-all duration-300" aria-label="DanniTech Solutions home">
             <div className="flex items-center">
               <span className="nav-brand-text text-lg font-black tracking-tight text-white transition-all duration-300 sm:text-2xl">
                 DanniTech
@@ -421,23 +413,23 @@ export default function Home() {
       <footer className="relative border-t border-white/10 bg-[#071A2A] text-[#AAB4C8] px-5 pt-16 pb-8 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           {/* Main Footer Grid */}
-          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.5fr_1fr_1fr_1fr] pb-12 border-b border-white/5">
+          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.8fr_1fr_1fr_1fr] pb-12 border-b border-white/5">
             {/* Column 1: Brand & Bio */}
             <div className="flex flex-col gap-4">
-              <a href="#top" className="inline-flex items-center gap-2.5 animate-rise -ml-2 hover:text-[#129BDB] transition-all duration-300" aria-label="DanniTech Solutions home">
+              <a href="#top" className="inline-flex items-center gap-3 animate-rise -ml-2 hover:text-[#129BDB] transition-all duration-300" aria-label="DanniTech Solutions home">
                 <Image
                   src="/images/logo-icon.png"
                   alt="DanniTech Solutions Logo Icon"
-                  width={160}
-                  height={160}
+                  width={200}
+                  height={200}
                   priority
-                  className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+                  className="h-16 w-16 object-contain sm:h-20 sm:w-20"
                 />
                 <div className="flex items-center">
-                  <span className="text-lg font-black tracking-tight text-white sm:text-2xl">
+                  <span className="text-2xl font-black tracking-tight text-white sm:text-4xl">
                     DanniTech
                   </span>
-                  <span className="text-[#129BDB] text-lg font-black tracking-tight sm:text-2xl">
+                  <span className="text-[#129BDB] text-2xl font-black tracking-tight sm:text-4xl">
                     Solutions
                   </span>
                 </div>
