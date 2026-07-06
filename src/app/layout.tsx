@@ -12,6 +12,16 @@ export const metadata: Metadata = {
     "school management system Ghana",
     "business software Accra",
   ],
+  icons: {
+    icon: [
+      { url: "/images/logo-icon.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/logo-icon.png", sizes: "64x64", type: "image/png" },
+      { url: "/images/logo-icon.png", sizes: "128x128", type: "image/png" },
+    ],
+    apple: [
+      { url: "/images/logo-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: "DanniTech Solutions",
     description:
