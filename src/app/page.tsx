@@ -208,7 +208,7 @@ export default function Home() {
           </div>
 
           <a
-            href="https://wa.me/233548470413"
+            href="https://wa.me/233536324053"
             className="shine-button rounded-full bg-[#129BDB] px-4 py-3 text-sm font-bold text-white shadow-[0_14px_32px_rgba(18,155,219,0.28)] transition hover:-translate-y-0.5 hover:bg-[#005DAA] sm:px-5"
             target="_blank"
             rel="noreferrer"
@@ -243,7 +243,7 @@ export default function Home() {
 
             <div className="animate-rise animation-delay-300 mt-9 flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://wa.me/233548470413"
+                href="https://wa.me/233536324053"
                 className="shine-button rounded-full bg-[#129BDB] px-6 py-4 text-center text-sm font-bold text-white shadow-[0_20px_50px_rgba(18,155,219,0.36)] transition hover:-translate-y-0.5 hover:bg-[#005DAA]"
                 target="_blank"
                 rel="noreferrer"
@@ -545,7 +545,7 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a
-              href="https://wa.me/233548470413"
+              href="https://wa.me/233536324053"
               className="shine-button rounded-full bg-[#129BDB] px-8 py-4 text-sm font-bold text-white shadow-[0_20px_50px_rgba(18,155,219,0.36)] transition hover:-translate-y-0.5 hover:bg-[#005DAA]"
               target="_blank"
               rel="noreferrer"
@@ -662,7 +662,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 00.099.281L7.1 8c-.495.89-.001 2.01.884 2.502l6.884 3.884c.895.502 2.01-.001 2.502-.884l1.116-1.116a1 1 0 01.281-.099l2.2-.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <div className="flex flex-col">
-                    <a href="tel:0548470413" className="transition hover:text-white">0548470413</a>
+                    <a href="tel:0536324053" className="transition hover:text-white">0536324053</a>
                     <a href="tel:0599008533" className="transition hover:text-white">0599008533</a>
                   </div>
                 </li>
@@ -697,7 +697,7 @@ export default function Home() {
 
       {/* Floating WhatsApp Action Button */}
       <a
-        href="https://wa.me/233548470413"
+        href="https://wa.me/233536324053"
         className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_12px_36px_rgba(37,211,102,0.42)] transition-all duration-300 hover:scale-110 hover:bg-[#20ba5a] active:scale-95"
         target="_blank"
         rel="noreferrer"
