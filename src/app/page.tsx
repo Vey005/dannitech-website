@@ -85,7 +85,7 @@ const products = [
     details: ["Menu management", "Kitchen tracking", "Order history"],
   },
   {
-    name: "School Management SaaS",
+    name: "Beacora SMS",
     image: "/images/ghana/african-students-classroom.jpg",
     alt: "African students in a classroom using school records and learning tools",
     position: "center",
@@ -631,7 +631,7 @@ export default function Home() {
                 {[
                   { label: "Sika POS", href: "#products" },
                   { label: "SynOrders", href: "#products" },
-                  { label: "School Management SaaS", href: "#products" },
+                  { label: "Beacora SMS", href: "#products" },
                 ].map((link, idx) => (
                   <li key={idx}>
                     <a
